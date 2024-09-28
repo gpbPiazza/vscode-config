@@ -4,13 +4,13 @@
     "workbench.colorTheme": "Min Dark",
     "workbench.activityBar.location": "hidden",
     "workbench.statusBar.visible": true,
-
     "window.titleBarStyle": "native",
-
     "editor.tabSize": 2,
     "editor.fontSize": 14,
     "editor.lineHeight": 1.8,
-    "editor.rulers": [100],
+    "editor.rulers": [
+        100
+    ],
     "editor.insertSpaces": true,
     "editor.fontLigatures": false,
     "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -22,15 +22,11 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
-    
     "terminal.integrated.fontSize": 14,
-
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-
     "symbols.hidesExplorerArrows": false,
-
     "security.workspace.trust.untrustedFiles": "newWindow",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
