@@ -4,13 +4,13 @@
     "workbench.colorTheme": "Min Dark",
     "workbench.activityBar.location": "hidden",
     "workbench.statusBar.visible": true,
+
     "window.titleBarStyle": "native",
+
     "editor.tabSize": 2,
     "editor.fontSize": 14,
     "editor.lineHeight": 1.8,
-    "editor.rulers": [
-        100
-    ],
+    "editor.rulers": [100],
     "editor.insertSpaces": true,
     "editor.fontLigatures": false,
     "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -22,11 +22,16 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
-    "terminal.integrated.fontSize": 14,
+    
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+
     "symbols.hidesExplorerArrows": false,
+
     "security.workspace.trust.untrustedFiles": "newWindow",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -42,7 +47,6 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "openapi.securityAuditToken": "CiD1uUnmc7fWEARhEc7AeeAi+Kz5+jCs7SVFF3LoVePnzRIYYE8k8V+t3wshOid8HqmrrujIZJgBfykaGnchqhwrmrVtE8iwKik07t/YfTEsI7Jjo7PDYQuLbaBZn6HPFnCqKlnA0A3MyyGqtck7uh3RltcKD0/EuK9yWlvR+IVQTGsUHjvxk9Z6HOk4jOseBqILN42Qw2s9s/CdvtES/kxpnWfVxs7/PIjaCTZmyG0qICC5eg==",
     "window.commandCenter": false,
     "git.replaceTagsWhenPull": true,
     "github.copilot.enable": {
@@ -51,7 +55,7 @@
         "markdown": false,
         "scminput": false
     },
-    // "ltex.language": "pt-BR", // TO CHANGE LANGUAGE CORRECTOR default usa
+    // "ltex.language": "pt-BR",
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "blink",
     "git.ignoreRebaseWarning": true,

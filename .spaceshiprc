@@ -1,0 +1,21 @@
+SPACESHIP_PROMPT_ORDER=(
+  dir   
+  git   
+  line_sep 
+  char    
+)
+
+# Customize directory section to show only the project name
+SPACESHIP_DIR_SHOW=true
+SPACESHIP_DIR_TRUNC=1
+SPACESHIP_DIR_TRUNC_REPO=false
+
+# Customize git section to show only the branch name
+SPACESHIP_GIT_BRANCH_SHOW=true
+SPACESHIP_GIT_STATUS_SHOW=false
+
+# Customize prompt character
+SPACESHIP_CHAR_SYMBOL="➜"
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_CHAR_COLOR_SUCCESS="purple"
+SPACESHIP_CHAR_COLOR_FAILURE="red"
