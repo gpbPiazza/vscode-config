@@ -16,11 +16,16 @@ source $ZSH/oh-my-zsh.sh
 alias zs_config="code ~/.zshrc"
 alias zs_reload="source ~/.zshrc"
 alias omyzs_config="code ~/.oh-my-zsh"
-alias spaceshiprc_config="code ~/.spaceshiprc"
+alias ss_config="code ~/.spaceshiprc"
 
-# GO
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+#GO
+
+
+eval "$(direnv hook zsh)"
 
 source /opt/homebrew/opt/spaceship/spaceship.zsh
+
+[[ -s "/Users/olaisaac/.gvm/scripts/gvm" ]] && source "/Users/olaisaac/.gvm/scripts/gvm"
+
+export GOROOT="/Users/olaisaac/.gvm/gos/go1.21" 
+export GOPATH=$HOME/go
