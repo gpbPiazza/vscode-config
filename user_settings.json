@@ -4,13 +4,14 @@
     "workbench.colorTheme": "Min Dark",
     "workbench.activityBar.location": "hidden",
     "workbench.statusBar.visible": true,
-
+    "workbench.editor.enablePreview": false,
     "window.titleBarStyle": "native",
-
     "editor.tabSize": 2,
     "editor.fontSize": 14,
     "editor.lineHeight": 1.8,
-    "editor.rulers": [100],
+    "editor.rulers": [
+        100
+    ],
     "editor.insertSpaces": true,
     "editor.fontLigatures": false,
     "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -19,28 +20,30 @@
     "editor.minimap.enabled": false,
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
+    // "python.formatting.provider": "black",
+    // "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
+        "source.fixAll.eslint": "always",
+        "source.organizeImports": "always"
     },
-    
+    // "[python]": {
+    //     "editor.defaultFormatter": "ms-python.black-formatter",
+    //     "editor.formatOnSave": true
+    // },
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-
     "symbols.hidesExplorerArrows": false,
-
     "security.workspace.trust.untrustedFiles": "newWindow",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "go.toolsManagement.autoUpdate": true,
-    "indentRainbow.includedLanguages": [],
     "go.testFlags": [
         "-tags=dynamic"
     ],
+    "indentRainbow.includedLanguages": [],
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -50,19 +53,32 @@
     "window.commandCenter": false,
     "git.replaceTagsWhenPull": true,
     "github.copilot.enable": {
-        "*": false,
         "plaintext": false,
         "markdown": false,
-        "scminput": false
+        "scminput": false,
+        "enableAutoCompletions": true,
+        "*": false
     },
-    // "ltex.language": "pt-BR",
+    "ltex.language": "pt-BR",
+    "[html]": {
+        "ltex.enabled": false
+    },
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "blink",
     "git.ignoreRebaseWarning": true,
-    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.enable.enableAutoCompletions": true,
     "git.suggestSmartCommit": false,
     "makefile.configureOnOpen": false,
     "workbench.sideBar.location": "right",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "go.toolsManagement.autoUpdate": true,
+    "python.createEnvironment.trigger": "off",
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.html": "default"
+    },
+    "github.copilot.chat.agent.thinkingTool": true,
+    "git.openRepositoryInParentFolders": "never",
+    "github.copilot.chat.completionContext.typescript.mode": "sidecar",
 }
