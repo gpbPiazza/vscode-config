@@ -77,4 +77,31 @@
     "command": "workbench.panel.chat",
     "when": "workbench.panel.chat.view.copilot.active"
   },
+  {
+    "key": "shift+cmd+m",
+    "command": "chatgpt.openSidebar"
+  },
+  {
+    "key": "cmd+n",
+    "command": "-chatgpt.newChat",
+    "when": "chatgpt.supportsNewChatKeyShortcut"
+  },
+  {
+    "key": "ctrl+]", 
+    "command": "cursorMove",
+    "args": {
+      "to": "nextBlankLine",
+      "select": false
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key":"ctrl+[", 
+    "command": "cursorMove",
+    "args": {
+      "to": "prevBlankLine",
+      "select": false
+    },
+    "when": "editorTextFocus"
+  }
 ]

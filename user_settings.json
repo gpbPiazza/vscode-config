@@ -61,7 +61,8 @@
     },
     "ltex.language": "pt-BR",
     "[html]": {
-        "ltex.enabled": false
+        "ltex.enabled": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "blink",
@@ -81,4 +82,20 @@
     "github.copilot.chat.agent.thinkingTool": true,
     "git.openRepositoryInParentFolders": "never",
     "github.copilot.chat.completionContext.typescript.mode": "sidecar",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "docker.extension.enableComposeLanguageServer": false,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
 }

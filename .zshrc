@@ -7,7 +7,6 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 plugins=(
   git 
   docker 
-  zsh-autosuggestions 
   kubectl
 )
 
@@ -24,26 +23,24 @@ alias pip="pip3"
 alias git="git -P"
 alias git_delete_branchs="git branch | grep -v "main" | xargs git branch -D"
 
+alias go_test_cover_file="go test -coverprofile=coverage.out"
+alias go_read_cover_file="go tool cover -html=coverage.out"
+
 alias kube="kubectl"
 alias kube_use_prod_cluster="kubectl config use-context gke-production"
 alias kube_use_dev_cluster="kubectl config use-context gke-development"
 alias kube_use_old_prod_cluster="kubectl config use-context old-gke-production"
+alias golint="golangci-lint"
 
 eval "$(direnv hook zsh)"
+eval "$(fnm env)"
 
 source "/opt/homebrew/opt/spaceship/spaceship.zsh"
 
-[[ -s "/Users/olaisaac/.gvm/scripts/gvm" ]] && source "/Users/olaisaac/.gvm/scripts/gvm"
+export GOROOT="/opt/homebrew/Cellar/go/1.25.3/libexec"
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 
-export GOROOT="/Users/olaisaac/.gvm/gos/go1.24.1"
-export GOPATH="$HOME/go"
-# Whenever change go version maybe you need to set this
-# ➜ go env -w GOTOOLCHAIN=go1.23.2+auto
-# ➜ go env -w GOROOT="/Users/olaisaac/.gvm/gos/go1.23.2"
-
-# export GOPATH=$HOME/goexport 
-export PATH=$PATH:$HOME/go/bin
-export GOROOT_BOOTSTRAP=$GOROOT
 export GOTESTSUM_FORMAT="testdox"
 export GOTESTSUM_FORMAT_ICONS="octicons"
 export GO111MODULE="on"
@@ -55,6 +52,30 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust \
+    zsh-users/zsh-autosuggestions \
+    zdharma/fast-syntax-highlighting \
+    zsh-users/zsh-completions
+
+### End of Zinit's installer chunk
+
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
