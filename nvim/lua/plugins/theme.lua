@@ -1,0 +1,1 @@
+/home/gpbpiazza/.config/omarchy/current/theme/neovim.lua
